@@ -1,0 +1,24 @@
+{
+  "title": "半圆轨道抛出",
+  "source_question": "小球沿半圆轨道运动，离开端点后沿切线方向抛出。",
+  "problem_type": "semicircle_launch",
+  "objects": [
+    {
+      "id": "ball",
+      "name": "小球",
+      "shape": "circle",
+      "radius": 0.24,
+      "motion": {
+        "kind": "semicircle_launch",
+        "parameters": {
+          "cx": 0, "cy": 0, "r": 3, "start_angle": 3.141593,
+          "omega": -1.25, "arc_duration": 2.513274, "gravity": 9.8
+        }
+      }
+    }
+  ],
+  "special_case": {"kind": "semicircle_launch", "condition": "离轨速度沿轨道切线"},
+  "duration": 4.5,
+  "explanation": ["先沿半圆轨道运动", "离轨后切换为抛体方程"]
+}
+

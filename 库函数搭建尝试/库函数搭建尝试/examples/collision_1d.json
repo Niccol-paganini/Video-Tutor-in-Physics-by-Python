@@ -1,0 +1,21 @@
+{
+  "title": "一维完全弹性碰撞",
+  "source_question": "质量2 kg的A以2.5 m/s向右运动，与质量1 kg、以1 m/s向左运动的B完全弹性碰撞。",
+  "problem_type": "collision_1d",
+  "objects": [
+    {
+      "id": "A", "name": "物体A", "shape": "square", "mass": 2,
+      "size": [0.8, 0.8], "initial_position": [-3, 0], "initial_velocity": [2.5, 0],
+      "color": "#2563eb", "motion": {"kind": "collision_1d"}
+    },
+    {
+      "id": "B", "name": "物体B", "shape": "square", "mass": 1,
+      "size": [0.8, 0.8], "initial_position": [2, 0], "initial_velocity": [-1, 0],
+      "color": "#dc2626", "motion": {"kind": "collision_1d"}
+    }
+  ],
+  "special_case": {"kind": "collision_1d", "elasticity": 1.0, "condition": "完全弹性碰撞"},
+  "duration": 5,
+  "explanation": ["碰撞前后动量守恒", "完全弹性碰撞机械能守恒"]
+}
+

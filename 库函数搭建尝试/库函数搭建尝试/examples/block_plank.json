@@ -1,0 +1,28 @@
+{
+  "title": "滑块—木板恰好不冲出",
+  "source_question": "滑块从木板左端开始滑动，最终恰好不从右端冲出。",
+  "problem_type": "block_plank",
+  "objects": [
+    {
+      "id": "plank", "name": "木板", "shape": "rectangle", "role": "plank",
+      "size": [6, 0.45], "initial_position": [0, -1.2], "color": "#a16207",
+      "motion": {"kind": "linear"}
+    },
+    {
+      "id": "slider", "name": "滑块", "shape": "square", "size": [0.7, 0.7],
+      "initial_position": [-2.65, -0.62], "initial_velocity": [4, 0], "color": "#dc2626",
+      "motion": {
+        "kind": "block_plank",
+        "parameters": {
+          "plank_length": 6, "start_relative_x": -2.65,
+          "relative_velocity": 4, "relative_acceleration": -1.509434,
+          "just_not_fall": 1
+        }
+      }
+    }
+  ],
+  "special_case": {"kind": "block_plank", "condition": "最大相对位移等于可用行程"},
+  "duration": 4,
+  "explanation": ["计算相对运动", "速度降为0时恰好到达木板右端"]
+}
+

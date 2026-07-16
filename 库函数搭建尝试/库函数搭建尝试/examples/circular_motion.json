@@ -1,0 +1,25 @@
+{
+  "title": "匀速圆周运动",
+  "source_question": "半径3 m的圆周上，质点以1.2 rad/s做匀速圆周运动。",
+  "problem_type": "circular",
+  "objects": [
+    {
+      "id": "ball",
+      "name": "质点",
+      "shape": "point",
+      "radius": 0.14,
+      "initial_position": [3, 0],
+      "color": "#2563eb",
+      "motion": {
+        "kind": "circular",
+        "x": "cx + r*cos(omega*t + phase)",
+        "y": "cy + r*sin(omega*t + phase)",
+        "parameters": {"cx": 0, "cy": 0, "r": 3, "omega": 1.2, "phase": 0}
+      }
+    }
+  ],
+  "special_case": {"kind": "centripetal_acceleration", "condition": "a=v²/r=ω²r"},
+  "duration": 6,
+  "explanation": ["质点沿圆周运动", "速度沿切线方向", "向心加速度始终指向圆心"]
+}
+
